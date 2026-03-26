@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mercado Verde - Frutas y Verduras</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+ 
+  <!-- Toast container -->
+  <div id="toast-container" aria-live="polite" aria-atomic="true"></div>
+ 
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <span class="brand-leaf">🌿</span> Mercado Verde
+      </div>
+      <nav class="main-nav">
+        <a href="#frutas">Frutas</a>
+        <a href="#verduras">Verduras</a>
+        <a href="#ofertas">Ofertas</a>
+      </nav>
+      <button class="cta" id="cart-button" aria-label="Abrir carrito">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/>
+          <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
+        </svg>
+        Carrito
+        <span class="cart-count" id="cart-count">0</span>
+      </button>
+    </div>
+  </header>
+ 
+  <main class="container">
+ 
+    <!-- Producto principal -->
+    <section class="product" id="frutas">
+      <div class="product-media">
+        <div class="image-frame">
+          <div class="image-badge">Temporada</div>
+          <img src="images/principal.svg" alt="Caja de frutas orgánicas" />
+        </div>
+      </div>
+ 
+      <aside class="product-info">
+        <span class="product-tag">⭐ Más vendido</span>
+        <h1>Caja de frutas orgánicas</h1>
+        <p class="subtitle">Selección semanal de temporada</p>
+ 
+        <div class="rating">
+          <span class="stars">★★★★★</span>
+          <span class="rating-text">4.9 (238 reseñas)</span>
+        </div>
+ 
+        <p class="price">24,90 <span class="currency">€</span></p>
+ 
+        <p class="lead">
+          Disfruta de una caja variada con peras, cerezas, sandía y otras frutas
+          frescas de cultivo responsable, recolectadas en su punto óptimo de maduración.
+        </p>
+ 
+        <div class="product-features">
+          <span>🌱 Orgánico</span>
+          <span>❄️ Envío frío</span>
+          <span>🏡 Km 0</span>
+        </div>
+ 
+        <button class="add-to-cart" data-product="Caja de frutas orgánicas" data-price="24.90">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/>
+          </svg>
+          Añadir al carrito
+        </button>
+ 
+        <p class="note">
+          Envío frío en 24–48 h · Peso aprox. 5 kg · El contenido puede variar según la temporada.
+        </p>
+      </aside>
+    </section>
+ 
+    <!-- Grid de productos relacionados -->
+    <section class="related" id="verduras">
+      <div class="related-header">
+        <h2>Productos relacionados</h2>
+        <a href="#" class="see-all">Ver todos →</a>
+      </div>
+      <div class="grid related-grid">
+ 
+        <article class="card">
+          <div class="card-img-wrap">
+            <img src="images/pear.svg" alt="Peras conferencia frescas">
+          </div>
+          <div class="card-body">
+            <h3>Peras conferencia ecológicas</h3>
+            <p class="muted">Malla de 1,5 kg de peras dulces y jugosas, ideales para postres o para comer crudas.</p>
+            <div class="card-footer">
+              <p class="card-price">3,80 €<span>/kg</span></p>
+              <button class="card-btn" data-product="Peras conferencia" data-price="3.80">+</button>
+            </div>
+          </div>
+        </article>
+ 
+        <article class="card">
+          <div class="card-img-wrap">
+            <img src="images/rabano.svg" alt="Rábanos frescos">
+          </div>
+          <div class="card-body">
+            <h3>Rábanos rojos de huerto</h3>
+            <p class="muted">Manojo de rábanos crujientes, perfectos para ensaladas y snacks saludables.</p>
+            <div class="card-footer">
+              <p class="card-price">1,20 €<span>/manojo</span></p>
+              <button class="card-btn" data-product="Rábanos rojos" data-price="1.20">+</button>
+            </div>
+          </div>
+        </article>
+ 
+        <article class="card">
+          <div class="card-img-wrap">
+            <img src="images/watermelon.svg" alt="Sandía sin semillas">
+          </div>
+          <div class="card-body">
+            <h3>Sandía sin semillas</h3>
+            <p class="muted">Pieza entera de sandía rayada, muy refrescante, ideal para compartir en verano.</p>
+            <div class="card-footer">
+              <p class="card-price">0,99 €<span>/kg</span></p>
+              <button class="card-btn" data-product="Sandía sin semillas" data-price="0.99">+</button>
+            </div>
+          </div>
+        </article>
+ 
+        <article class="card">
+          <div class="card-img-wrap">
+            <img src="images/pan-vegetal.svg" alt="Pan integral con verduras">
+          </div>
+          <div class="card-body">
+            <h3>Pan integral con verduras</h3>
+            <p class="muted">Hogaza artesanal con zanahoria y calabacín, perfecta para tostadas y bocadillos.</p>
+            <div class="card-footer">
+              <p class="card-price">3,50 €<span>/unidad</span></p>
+              <button class="card-btn" data-product="Pan integral con verduras" data-price="3.50">+</button>
+            </div>
+          </div>
+        </article>
+ 
+        <article class="card">
+          <div class="card-img-wrap">
+            <img src="images/cerezas.svg" alt="Cerezas rojas">
+          </div>
+          <div class="card-body">
+            <h3>Cerezas rojas premium</h3>
+            <p class="muted">Bandeja de 500 g de cerezas firmes, de sabor intenso y muy aromáticas.</p>
+            <div class="card-footer">
+              <p class="card-price">5,40 €<span>/bandeja</span></p>
+              <button class="card-btn" data-product="Cerezas rojas premium" data-price="5.40">+</button>
+            </div>
+          </div>
+        </article>
+ 
+        <article class="card">
+          <div class="card-img-wrap">
+            <img src="images/hongo.svg" alt="Setas portobello">
+          </div>
+          <div class="card-body">
+            <h3>Setas portobello frescas</h3>
+            <p class="muted">Bandeja de 400 g de setas portobello, listas para saltear o preparar a la plancha.</p>
+            <div class="card-footer">
+              <p class="card-price">3,10 €<span>/bandeja</span></p>
+              <button class="card-btn" data-product="Setas portobello" data-price="3.10">+</button>
+            </div>
+          </div>
+        </article>
+ 
+      </div>
+    </section>
+  </main>
+ 
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-top">
+        <div class="brand footer-brand">
+          <span class="brand-leaf">🌿</span> Mercado Verde
+        </div>
+        <p class="footer-tagline">Del campo a tu mesa, con cariño.</p>
+        <div class="footer-icons" aria-label="Redes sociales">
+          <img src="images/socials/Navigation/Social Icons.svg" alt="Redes sociales" class="footer-social-single">
+        </div>
+      </div>
+ 
+      <div class="links">
+        <div>
+          <h4>Atención al cliente</h4>
+          <a href="#ofertas">Ofertas actuales</a>
+          <a href="#">Envíos y devoluciones</a>
+        </div>
+        <div>
+          <h4>La tienda</h4>
+          <a href="#frutas">Frutas de temporada</a>
+          <a href="#verduras">Verduras ecológicas</a>
+        </div>
+        <div>
+          <h4>Información</h4>
+          <a href="#">Quiénes somos</a>
+          <a href="#">Política de privacidad</a>
+        </div>
+      </div>
+ 
+      <p class="footer-copy">© 2025 Mercado Verde · Todos los derechos reservados</p>
+    </div>
+  </footer>
+ 
+  <script src="script.js"></script>
+</body>
+</html>
